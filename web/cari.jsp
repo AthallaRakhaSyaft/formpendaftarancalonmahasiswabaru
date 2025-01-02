@@ -153,6 +153,22 @@
                 font-size: 14px;
             }
         }
+        
+            .logout-button {
+            background-color: #f44336;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            margin-top: 30px; /* Added margin-top to push the logout button down */
+        }
+
+            .logout-button:hover {
+            background-color: #e53935;
+        }    
     </style>
 </head>
 <body>
