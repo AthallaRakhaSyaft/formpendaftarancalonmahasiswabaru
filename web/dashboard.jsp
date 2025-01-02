@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PMB Online System</title>
     <style>
+        /* Add these styles to properly align the radio buttons */
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; /* Adjust the gap to control spacing between radio buttons */
+        }
+
+        .radio-group label {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .radio-group input {
+            margin-right: 8px; /* Small space between the radio button and its label */
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -243,6 +259,8 @@
                         </label>
                     </div>
                 </div>
+                
+                <p></p>
 
                 <label for="alamat">Alamat Lengkap:</label>
                 <textarea id="alamat" name="alamat" rows="4" placeholder="Masukkan alamat lengkap" required></textarea>
