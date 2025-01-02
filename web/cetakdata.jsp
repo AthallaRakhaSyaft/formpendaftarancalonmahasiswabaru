@@ -88,6 +88,47 @@
             margin-bottom: 20px;
         }
 
+        /* Red button for Logout */
+        .logout-button {
+            background-color: red; /* Red background */
+            color: white; /* White text */
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .logout-button:hover {
+            background-color: darkred; /* Darker red on hover */
+        }
+
+        @media print {
+            body {
+                background: none;
+            }
+
+            .container {
+                max-width: 100%;
+                box-shadow: none;
+                padding: 20px;
+            }
+
+            button {
+                display: none; /* Hide the print button on print */
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .data-row {
+                font-size: 14px;
+            }
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 20px;
@@ -108,9 +149,9 @@
         }
     </style>
 </head>
-<body>
+<body onload="window.print();">
     <div class="container">
-        <h1>Detail Data Calon Mahasiswa</h1>
+        <h1>Detail Data Calon Mahasiswa Baru</h1>
 
         <div>
         <% 
@@ -171,7 +212,7 @@
             <span class="label">Informasi Orang Tua:</span> <%= informasiOrangtua %>
         </div>
 
-        <%
+        <% 
                     } else {
                         out.println("<div class='error-message'>Data dengan email " + email + " tidak ditemukan.</div>");
                     }
@@ -190,8 +231,10 @@
             }
         %>
         </div>
-
-        <button class="print-button" onclick="window.print();">Cetak</button>
+        
+        <form action="lihatdata.jsp" method="get">
+            <button type="submit" class="logout-button">Logout</button>
+        </form>
     </div>
 </body>
 </html>
